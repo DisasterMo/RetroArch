@@ -1,0 +1,11 @@
+"project_identifier": "retroarch"
+"api_key": "_secret_"
+"preserve_hierarchy": true
+
+"files":
+  [
+    {
+      "source": "/msg_hash_us.json",
+      "translation": "/msg_hash_%two_letters_code%.json",
+    },
+  ]
