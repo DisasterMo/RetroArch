@@ -351,19 +351,28 @@ def create_v2_code_file(struct_text, file_name):
         declaration = construct.group(1)
         struct_match = cor.p_type_name.search(declaration)
         if struct_match:
-            struct_type_name = struct_match.group(1, 2)
+            if struct_match.group(3):
+                struct_type_name_lang = struct_match.group(1, 2, 3)
+                declaration_end = declaration[struct_match.end(1):]
+            elif struct_match.group(4):
+                struct_type_name_lang = struct_match.group(1, 2, 4)
+                declaration_end = declaration[struct_match.end(1):]
+            else:
+                struct_type_name_lang = sum((struct_match.group(1, 2), ('_us',)), ())
+                declaration_end = f'{declaration[struct_match.end(1):struct_match.end(2)]}_us' \
+                                  f'{declaration[struct_match.end(2):]}'
         else:
             return -1
 
-        if 'retro_core_option_definition' == struct_type_name[0]:
+        if 'retro_core_option_definition' == struct_type_name_lang[0]:
             import shutil
             shutil.copy(file_name, file_name + '.v1')
-            new_declaration = f'\nstruct retro_core_option_v2_category option_cats_{struct_match.group(3)}[] = ' \
+            new_declaration = f'\nstruct retro_core_option_v2_category option_cats{struct_type_name_lang[2]}[] = ' \
                               '{\n   { NULL, NULL, NULL },\n' \
                               '};\n\n' \
                               + declaration[:struct_match.start(1)] + \
                               'retro_core_option_v2_definition' \
-                              + declaration[struct_match.end(1):]
+                              + declaration_end
             offset = construct.start(0)
             repl_text = repl_text + cor.re.sub(cor.re.escape(declaration), new_declaration,
                                                construct.group(0)[:construct.start(2) - offset])
@@ -372,10 +381,10 @@ def create_v2_code_file(struct_text, file_name):
 
             repl_text = repl_text + new_content + cor.re.sub(r'{\s*NULL,\s*NULL,\s*NULL,\s*{\{0}},\s*NULL\s*},\s*};',
                                                              '{ NULL, NULL, NULL, NULL, NULL, NULL, {{0}}, NULL },\n};'
-                                                             '\n\nstruct retro_core_options_v2 options_' +
-                                                             struct_match.group(3) + ' = {\n'
-                                                             f'   option_cats_{struct_match.group(3)},\n'
-                                                             f'   option_defs_{struct_match.group(3)}\n'
+                                                             '\n\nstruct retro_core_options_v2 options' +
+                                                             struct_type_name_lang[2] + ' = {\n'
+                                                             f'   option_cats{struct_type_name_lang[2]},\n'
+                                                             f'   option_defs{struct_type_name_lang[2]}\n'
                                                              '};',
                                                              construct.group(0)[construct.end(2) - offset:])
             out_text = cor.re.sub(cor.re.escape(construct.group(0)), repl_text, out_text)

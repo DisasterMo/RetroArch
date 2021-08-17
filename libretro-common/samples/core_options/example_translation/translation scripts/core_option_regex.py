@@ -8,7 +8,7 @@ p_struct = re.compile(r'(struct\s*[a-zA-Z0-9_\s]+\[])\s*'
                       r'{((?:.|[\r\n])*?)\{\s*NULL,\s*NULL,\s*NULL\s*(?:.|[\r\n])*?},?(?:.|[\r\n])*?};')  # captures full struct, it's beginning and it's content
 # 0: type name[]; 1: type; 2: name
 p_type_name = re.compile(r'(retro_core_option_[a-zA-Z0-9_]+)\s*'
-                         r'(option_cats[a-z_]{0,8}|option_defs([a-z_]{0,8}))\s*\[]')
+                         r'(option_cats([a-z_]{0,8})|option_defs([a-z_]{0,8}))\s*\[]')
 # 0: full option; 1: key; 2: description; 3: additional info; 4: key/value pairs
 p_option = re.compile(r'{\s*'  # opening braces
                       r'(?:(?:\/\*(?:.|[\r\n])*?\*\/|\/\/.*[\r\n]+|#.*[\r\n]+)\s*)*'
