@@ -68,10 +68,8 @@ def create_v2_code_file(struct_text, file_name):
                  ' * - 1.0: First commit\n' \
                  '*/\n'
 
-    p_intl = cor.re.compile(r'(struct retro_core_option_definition \*option_defs_intl\[RETRO_LANGUAGE_LAST]) = {'
-                            r'((?:.|[\r\n])*?)};')
-    p_set = cor.re.compile(r'static INLINE void libretro_set_core_options\(retro_environment_t environ_cb\)'
-                           r'(?:.|[\r\n])*?};?\s*#ifdef __cplusplus\s*}\s*#endif')
+    p_intl = cor.p_intl
+    p_set = cor.p_set
     new_set = 'static INLINE void libretro_set_core_options(retro_environment_t environ_cb,\n' \
               '      bool *categories_supported)\n' \
               '{\n' \
@@ -396,7 +394,31 @@ def create_v2_code_file(struct_text, file_name):
         if intl:
             new_intl = out_text[:intl.start(1)] \
                        + 'struct retro_core_options_v2 *options_intl[RETRO_LANGUAGE_LAST]' \
-                       + out_text[intl.end(1):intl.start(2)] + cor.re.sub(r'option_defs_', '&options_', intl.group(2)) \
+                       + out_text[intl.end(1):intl.start(2)] \
+                       + '&options_us, /* RETRO_LANGUAGE_ENGLISH */' \
+                       '   &options_ja,      /* RETRO_LANGUAGE_JAPANESE */' \
+                       '   &options_fr,      /* RETRO_LANGUAGE_FRENCH */' \
+                       '   &options_es,      /* RETRO_LANGUAGE_SPANISH */' \
+                       '   &options_de,      /* RETRO_LANGUAGE_GERMAN */' \
+                       '   &options_it,      /* RETRO_LANGUAGE_ITALIAN */' \
+                       '   &options_nl,      /* RETRO_LANGUAGE_DUTCH */' \
+                       '   &options_pt_br,   /* RETRO_LANGUAGE_PORTUGUESE_BRAZIL */' \
+                       '   &options_pt_pt,   /* RETRO_LANGUAGE_PORTUGUESE_PORTUGAL */' \
+                       '   &options_ru,      /* RETRO_LANGUAGE_RUSSIAN */' \
+                       '   &options_ko,      /* RETRO_LANGUAGE_KOREAN */' \
+                       '   &options_cht,     /* RETRO_LANGUAGE_CHINESE_TRADITIONAL */' \
+                       '   &options_chs,     /* RETRO_LANGUAGE_CHINESE_SIMPLIFIED */' \
+                       '   &options_eo,      /* RETRO_LANGUAGE_ESPERANTO */' \
+                       '   &options_pl,      /* RETRO_LANGUAGE_POLISH */' \
+                       '   &options_vn,      /* RETRO_LANGUAGE_VIETNAMESE */' \
+                       '   &options_ar,      /* RETRO_LANGUAGE_ARABIC */' \
+                       '   &options_el,      /* RETRO_LANGUAGE_GREEK */' \
+                       '   &options_tr,      /* RETRO_LANGUAGE_TURKISH */' \
+                       '   &options_sv,      /* RETRO_LANGUAGE_SLOVAK */' \
+                       '   &options_fa,      /* RETRO_LANGUAGE_PERSIAN */' \
+                       '   &options_he,      /* RETRO_LANGUAGE_HEBREW */' \
+                       '   &options_ast,     /* RETRO_LANGUAGE_ASTURIAN */' \
+                       '   &options_fi,      /* RETRO_LANGUAGE_FINNISH */' \
                        + out_text[intl.end(2):]
             out_text = p_set.sub(new_set, new_intl)
         else:

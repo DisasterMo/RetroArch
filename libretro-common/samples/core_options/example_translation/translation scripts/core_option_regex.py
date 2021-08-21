@@ -61,8 +61,8 @@ p_option = re.compile(r'{\s*'  # opening braces
 # analyse option group 3
 p_info = re.compile(r'(NULL|\"(?:.|[\r\n])*?\")\s*'  # description in category, info, info in category, category
                     r'(?:(?:\/\*(?:.|[\r\n])*?\*\/|\/\/.*[\r\n]+|#.*[\r\n]+)\s*)*'
-                    r',\s*'  # comma
-                    r'(?:(?:\/\*(?:.|[\r\n])*?\*\/|\/\/.*[\r\n]+|#.*[\r\n]+)\s*)*')
+                    r',')
+p_info_cat = re.compile(r'(NULL|\"(?:.|[\r\n])*?\")')
 # analyse option group 4
 p_key_value = re.compile(r'{\s*'  # opening braces
                          r'(?:(?:\/\*(?:.|[\r\n])*?\*\/|\/\/.*[\r\n]+|#.*[\r\n]+)\s*)*'
@@ -72,9 +72,24 @@ p_key_value = re.compile(r'{\s*'  # opening braces
                          r'(?:(?:\/\*(?:.|[\r\n])*?\*\/|\/\/.*[\r\n]+|#.*[\r\n]+)\s*)*'
                          r'(NULL|\".*?\")\s*'  # option value; 2
                          r'(?:(?:\/\*(?:.|[\r\n])*?\*\/|\/\/.*[\r\n]+|#.*[\r\n]+)\s*)*'
-                         r'}\s*'  # closing braces
-                         r'(?:(?:\/\*(?:.|[\r\n])*?\*\/|\/\/.*[\r\n]+|#.*[\r\n]+)\s*)*'
-                         r',?\s*'  # comma
-                         r'(?:(?:\/\*(?:.|[\r\n])*?\*\/|\/\/.*[\r\n]+|#.*[\r\n]+)\s*)*')
+                         r'}')
 
 p_masked = re.compile(r'([A-Z_][A-Z0-9_]+)\s*(\"(?:"\s*"|\\\s*|.)*\")')
+
+p_intl = re.compile(r'(struct retro_core_option_definition \*option_defs_intl\[RETRO_LANGUAGE_LAST]) = {'
+                    r'((?:.|[\r\n])*?)};')
+p_set = re.compile(r'static INLINE void libretro_set_core_options\(retro_environment_t environ_cb\)'
+                   r'(?:.|[\r\n])*?};?\s*#ifdef __cplusplus\s*}\s*#endif')
+
+p_yaml = re.compile(r'"project_id": "[0-9]+".*\s*'
+                    r'"api_token": "([a-zA-Z0-9]+)".*\s*'
+                    r'"base_path": "\./intl".*\s*'
+                    r'"base_url": "https://api\.crowdin\.com".*\s*'
+                    r'"preserve_hierarchy": true.*\s*'
+                    r'"files": \[\s*'
+                    r'\{\s*'
+                    r'"source": "/_us/\*\.json",.*\s*'
+                    r'"translation": "/_%two_letters_code%/%original_file_name%",.*\s*'
+                    r'"skip_untranslated_strings": true.*\s*'
+                    r'},\s*'
+                    r']')
