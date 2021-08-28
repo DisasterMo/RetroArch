@@ -2,24 +2,19 @@
 
 """Core options text extractor
 
-The purpose of this script is to automatically generate 'libretro_core_options_intl.h' from 'libretro_core_options.h'
-using translations from crowdin.
+The purpose of this script is to set up & provide functions for automatic generation of 'libretro_core_options_intl.h'
+from 'libretro_core_options.h' using translations from Crowdin.
 
 Both v1 and v2 structs are supported. It is, however, recommended to convert v1 files to v2 using the included
 'v1_to_v2_converter.py'.
 
 Usage:
 Place this script, as well as the accompanying files, into the folder containing 'libretro_core_options.h' and
-run it: python3 translate.py [option] [value] ...
-        options:
-                -t  'Crowdin API token': (required) Your Crowdin API token
-                -n  'core name'        : (required) The name of the core
-                -u                     : (optional) Upload present translations to crowdin
+run it: python3 core_opt_translation.py
 
 This script will:
-1.) create key words for & extract the relevant texts from libretro_core_options.h & save them into <core_name>_us.h
-2.) sync those texts with crowndin & download available translations (if you have the proper permissions, that is)
-4.) (re-)create libretro_core_options_intl.h with the new translations
+1.) create key words for & extract the texts from libretro_core_options.h & save them into intl/_us/core_options.h
+2.) do the same for any present translations in libretro_core_options_intl.h, saving those in their respective folder
 """
 import core_option_regex as cor
 import re
@@ -29,39 +24,6 @@ import subprocess
 import json
 import urllib.request as req
 import shutil
-
-# import time
-
-try:
-    for _num, _arg in enumerate(sys.argv):
-        if _arg == '-t':
-            _val = sys.argv[_num + 1]
-            API_TOKEN = _val
-        elif _arg == '-n':
-            _val = sys.argv[_num + 1]
-            _core_name = _val
-        elif _arg == '-u':
-            UPLOAD_TRANSLATIONS = True
-except IndexError:
-    print('Please provide both Crowdin API token & core name!')
-    sys.exit(1)
-
-try:
-    API_TOKEN
-except NameError:
-    print('Please provide both Crowdin API token & core name!')
-    sys.exit(1)
-try:
-    _core_name
-except NameError:
-    print('Please provide both Crowdin API token & core name!')
-    sys.exit(1)
-try:
-    UPLOAD_TRANSLATIONS
-except NameError:
-    UPLOAD_TRANSLATIONS = False
-
-_main_text = ''
 
 # global constants
 if os.name == 'nt':
@@ -631,7 +593,7 @@ def create_intl_file(text: str, core_name: str, file_path: str) -> None:
                                         f'   option_cats{lang_low},\n' \
                                         f'   option_defs{lang_low}\n' \
                                         '};\n\n'
-            shutil.rmtree(JOINER.join((INTL_DIR_PATH, folder)))
+        #    shutil.rmtree(JOINER.join((INTL_DIR_PATH, folder)))
 
     with open(INTL_FILE_PATH, 'w', encoding='utf-8') as intl:  # libretro_core_options_intl.h
         intl.write(out_txt + '\n#ifdef __cplusplus\n'
@@ -644,20 +606,9 @@ def create_intl_file(text: str, core_name: str, file_path: str) -> None:
 
 if __name__ == '__main__':
     #
-    try:  # writing sensitive data into crowdin.yaml
-        with open(YAML_FILE_PATH, 'r', encoding='utf-8') as _y_file:
-            _crowdin_config = _y_file.read()
-            _config_match = cor.p_yaml.search(_crowdin_config)
-        with open(YAML_FILE_PATH, 'w', encoding='utf-8') as _y_file:
-            _y_file.write(
-                _crowdin_config[:_config_match.start(1)] + API_TOKEN + _crowdin_config[_config_match.end(1):])
-    except OSError:
-        print('Could not write API token to crowdin.yaml! Is it present & writable?')
-        sys.exit(1)
 
-    try:  # making sure crowdin.yaml is cleaned up at the end.
-        _core_name = clean_file_name(_core_name)
-        _client = get_crowdin_client()
+    try:
+        _core_name = 'core_options'
 
         print('Getting texts from libretro_core_options.h')
         with open(H_FILE_PATH, 'r+', encoding='utf-8') as _h_file:
@@ -666,100 +617,21 @@ if __name__ == '__main__':
         if not os.path.exists(INTL_DIR_PATH):
             os.makedirs(INTL_DIR_PATH)
         _files = create_msg_hash(_core_name, _hash_n_str)
-
-        print('Syncing with crowdin:')
         _source_jsons = h2json(_files)
-        try:  # uploading source texts
-            print(f'Uploading {_source_jsons["_us"]} ...')
-            subprocess.run(['java', '-jar', _client, 'upload', 'sources'])
-            _create_translation = True
-        except KeyError:
-            print('Naming error, or you are trying to upload a non-English source file!')
-            _create_translation = False
 
-        # print('\nWait 5s for Crowdin server to process data')
-        # time.sleep(5)
-
-        # while True:
-        #     _response = input('Would you like to upload present translations? (y/n)\n')
-        #     if _response.lower() == 'y' or _response.lower() == 'yes':
-        #         _upload_translations = True
-        #         break
-        #     elif _response.lower() == 'n' or _response.lower() == 'no':
-        #         _upload_translations = False
-        #         break
-        #     else:
-        #         print('Invalid input. Try again.\n')
-
-        if UPLOAD_TRANSLATIONS:
-            try:
-                with open(INTL_FILE_PATH, 'r+', encoding='utf-8') as _intl_file:
-                    _intl_text = _intl_file.read()
-                    _err = False
-            except OSError:
-                print(f'ERROR: Could not find/open {INTL_FILE_PATH}!')
-                _err = True
-
-            if _err:
-                if 2 > len(_hash_n_str):
-                    _upload = False
-                    _intl_jsons = _source_jsons
-                    print('No translations available.')
-                else:
-                    _upload = True
-                    _intl_jsons = _source_jsons
-                    print(f'But translations found in {H_FILE_PATH}\nAttempting upload:')
-            else:
-                _upload = True
+        print('Getting texts from libretro_core_options_intl.h')
+        try:
+            with open(INTL_FILE_PATH, 'r+', encoding='utf-8') as _intl_file:
+                _intl_text = _intl_file.read()
                 _hash_n_str_intl = get_texts(_intl_text)
                 _intl_files = create_msg_hash(_core_name, _hash_n_str_intl)
                 _intl_jsons = h2json(_intl_files)
+        except OSError:
+            print(f'ERROR: Could not find/open {INTL_FILE_PATH}!')
+            _intl_jsons = _source_jsons
 
-            if _upload:
-                print('Uploading present translations:')
-
-                subprocess.run(['java', '-jar', _client, 'upload', 'translations'])
-                for _intl_lang in _intl_jsons:
-                    if _intl_lang == '_us':
-                        continue
-                    else:
-                        shutil.rmtree(os.path.dirname(_intl_jsons[_intl_lang]))
-
-        print('\nDownloading translations from crowdin...')
-        subprocess.run(['java', '-jar', _client, 'download'])
-
-        print('Converting translations *.json to *.h:')
-        for _folder in os.listdir(INTL_DIR_PATH):
-            if _folder.startswith('_'):
-                print(_folder)
-                json2h(JOINER.join((INTL_DIR_PATH, _folder)), _core_name)
-
-        # try:
-        #     while True:
-        #         u_inp = input('Construct libretro_core_options_intl.h? (y/n)\n')
-        #         if u_inp.lower() == 'y' or u_inp.lower() == 'yes':
-        #             print('Constructing libretro_core_options_intl.h')
-        #             create_intl_file(_main_text, _core_name, _files['_us'])
-        #             break
-        #         elif u_inp.lower() == 'n' or u_inp.lower() == 'no':
-        #             break
-        #         else:
-        #             print('Invalid input! Try again.')
-        # except KeyboardInterrupt:
-        #     print('Aborted by KeyboardInterrupt!')
-
-        print('Constructing libretro_core_options_intl.h')
-        create_intl_file(_main_text, _core_name, _files['_us'])
     except Exception as e:
         print(e)
         print('\nERROR: Something went wrong during synchronisation! Cleaning up...')
 
-    try:
-        with open(YAML_FILE_PATH, 'r', encoding='utf-8') as _y_file:
-            _crowdin_config = _y_file.read()
-            _config_match = cor.p_yaml.search(_crowdin_config)
-        with open(YAML_FILE_PATH, 'w', encoding='utf-8') as _y_file:
-            _y_file.write(_crowdin_config[:_config_match.start(1)] + '000000' + _crowdin_config[_config_match.end(1):])
-    except OSError:
-        print('ERROR: Could not clean up crowdin.yaml! Please clean up manually!')
     print('\nAll done!')
