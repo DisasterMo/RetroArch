@@ -294,7 +294,27 @@ enum retro_language
    /* Ensure sizeof(enum) == sizeof(int) */
    RETRO_LANGUAGE_DUMMY          = INT_MAX
 };
+ /*
+  * Id values for RGUI (6x10) fonts, each corresponding
+  * to the first character of the range
+  */
+ enum rgui_font
+ {
+    RGUI_FONT_ANSI            = 0x0,
+    RGUI_FONT_LATIN_EXT       = 0x100,
+    RGUI_FONT_GREEK_N_COPTIC  = 0x370,
+    RGUI_FONT_CYRILLIC        = 0x400,
+    RGUI_FONT_GREEK_EXT       = 0x1F00,
+    RGUI_FONT_JAPANESE        = 0x3000,
+    RGUI_FONT_CHINESE         = 0x4E00,
+    RGUI_FONT_KOREAN          = 0xAC00,
 
+    /* UTF-8 limit */
+    RGUI_FONT_LAST            = 0x10FFFF,
+
+    /* Ensure sizeof(enum) == sizeof(int) */
+    RGUI_FONT_MAX             = INT_MAX
+ };
 /* Passed to retro_get_memory_data/size().
  * If the memory type doesn't apply to the
  * implementation NULL/0 can be returned.

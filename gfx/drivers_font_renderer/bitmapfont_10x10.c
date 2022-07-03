@@ -64,7 +64,7 @@
 /* Loads a font of the specified language
  * Returns NULL if language is invalid or
  * font file is missing */
-bitmapfont_lut_t *bitmapfont_10x10_load(unsigned language)
+bitmapfont_lut_t *bitmapfont_10x10_load(unsigned rgui_font)
 {
    char font_dir[PATH_MAX_LENGTH];
    char font_path[PATH_MAX_LENGTH];
@@ -85,34 +85,33 @@ bitmapfont_lut_t *bitmapfont_10x10_load(unsigned language)
 
    /* Get font file associated with
     * specified language */
-   switch (language)
+   switch (rgui_font)
    {
-      case RETRO_LANGUAGE_ENGLISH:
+      case RGUI_FONT_ANSI:
          font_file = FONT_10X10_FILE_ENG;
          font_size = FONT_10X10_SIZE_ENG;
          glyph_min = FONT_10X10_GLYPH_MIN_ENG;
          glyph_max = FONT_10X10_GLYPH_MAX_ENG;
          break;
-      case RETRO_LANGUAGE_CHINESE_SIMPLIFIED:
-      case RETRO_LANGUAGE_CHINESE_TRADITIONAL:
+      case RGUI_FONT_CHINESE:
          font_file = FONT_10X10_FILE_CHN;
          font_size = FONT_10X10_SIZE_CHN;
          glyph_min = FONT_10X10_GLYPH_MIN_CHN;
          glyph_max = FONT_10X10_GLYPH_MAX_CHN;
          break;
-      case RETRO_LANGUAGE_JAPANESE:
+      case RGUI_FONT_JAPANESE:
          font_file = FONT_10X10_FILE_JPN;
          font_size = FONT_10X10_SIZE_JPN;
          glyph_min = FONT_10X10_GLYPH_MIN_JPN;
          glyph_max = FONT_10X10_GLYPH_MAX_JPN;
          break;
-      case RETRO_LANGUAGE_KOREAN:
+      case RGUI_FONT_KOREAN:
          font_file = FONT_10X10_FILE_KOR;
          font_size = FONT_10X10_SIZE_KOR;
          glyph_min = FONT_10X10_GLYPH_MIN_KOR;
          glyph_max = FONT_10X10_GLYPH_MAX_KOR;
          break;
-      case RETRO_LANGUAGE_RUSSIAN:
+      case RGUI_FONT_CYRILLIC:
          font_file = FONT_10X10_FILE_RUS;
          font_size = FONT_10X10_SIZE_RUS;
          glyph_min = FONT_10X10_GLYPH_MIN_RUS;
@@ -124,7 +123,7 @@ bitmapfont_lut_t *bitmapfont_10x10_load(unsigned language)
 
    if (string_is_empty(font_file))
    {
-      RARCH_WARN("[bitmap 10x10] No font file found for specified language: %u\n", language);
+      RARCH_WARN("[bitmap 10x10] Font file not found for specified character: %u\n", rgui_font);
       goto error;
    }
 

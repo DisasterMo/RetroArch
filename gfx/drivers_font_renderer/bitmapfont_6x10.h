@@ -38,7 +38,7 @@
  * bitmapfont_free_lut().
  * Returns NULL if language is invalid or
  * font file is missing */
-bitmapfont_lut_t *bitmapfont_6x10_load(unsigned language);
+bitmapfont_lut_t *bitmapfont_6x10_load(unsigned rgui_font);
 
 #endif
 

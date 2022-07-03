@@ -48,10 +48,28 @@
 #define FONT_6X10_GLYPH_MIN_LSE 0x100
 #define FONT_6X10_GLYPH_MAX_LSE 0x24F
 
+/* Greek and Coptic */
+#define FONT_6X10_FILE_ELC      "bitmap6x10_greekandcoptic.bin"
+#define FONT_6X10_SIZE_ELC      1152
+#define FONT_6X10_GLYPH_MIN_ELC 0x370
+#define FONT_6X10_GLYPH_MAX_ELC 0x3FF
+
+/* Greek Extended */
+#define FONT_6X10_FILE_ELE      "bitmap6x10_greekextended.bin"
+#define FONT_6X10_SIZE_ELE      2048
+#define FONT_6X10_GLYPH_MIN_ELE 0x1F00
+#define FONT_6X10_GLYPH_MAX_ELE 0x1FFF
+
+/* Cyrillic + Supplement */
+#define FONT_6X10_FILE_CYR      "bitmap6x10_cyrillicsupplemented.bin"
+#define FONT_6X10_SIZE_CYR      2432
+#define FONT_6X10_GLYPH_MIN_CYR 0x400
+#define FONT_6X10_GLYPH_MAX_CYR 0x52F
+
 /* Loads a font of the specified language
  * Returns NULL if language is invalid or
  * font file is missing */
-bitmapfont_lut_t *bitmapfont_6x10_load(unsigned language)
+bitmapfont_lut_t *bitmapfont_6x10_load(unsigned rgui_font)
 {
    char font_dir[PATH_MAX_LENGTH];
    char font_path[PATH_MAX_LENGTH];
@@ -72,10 +90,10 @@ bitmapfont_lut_t *bitmapfont_6x10_load(unsigned language)
 
    /* Get font file associated with
     * specified language */
-   switch (language)
+   switch (rgui_font)
    {
       /* Needed individually for any non-Latin languages */
-      case RETRO_LANGUAGE_ENGLISH:
+      case RGUI_FONT_ANSI:
       {
          font_file = FONT_6X10_FILE_ENG;
          font_size = FONT_6X10_SIZE_ENG;
@@ -83,32 +101,8 @@ bitmapfont_lut_t *bitmapfont_6x10_load(unsigned language)
          glyph_max = FONT_6X10_GLYPH_MAX_ENG;
          break;
       }
-
-      /* All Latin alphabet languages go here */
-      case RETRO_LANGUAGE_FRENCH:
-      case RETRO_LANGUAGE_SPANISH:
-      case RETRO_LANGUAGE_GERMAN:
-      case RETRO_LANGUAGE_ITALIAN:
-      case RETRO_LANGUAGE_DUTCH:
-      case RETRO_LANGUAGE_PORTUGUESE_BRAZIL:
-      case RETRO_LANGUAGE_PORTUGUESE_PORTUGAL:
-      case RETRO_LANGUAGE_ESPERANTO:
-      case RETRO_LANGUAGE_POLISH:
-      case RETRO_LANGUAGE_VIETNAMESE:
-      case RETRO_LANGUAGE_TURKISH:
-      case RETRO_LANGUAGE_SLOVAK:
-      case RETRO_LANGUAGE_ASTURIAN:
-      case RETRO_LANGUAGE_FINNISH:
-      case RETRO_LANGUAGE_INDONESIAN:
-      case RETRO_LANGUAGE_SWEDISH:
-      case RETRO_LANGUAGE_CZECH:
-      /* These languages are not yet added
-      case RETRO_LANGUAGE_ROMANIAN:
-      case RETRO_LANGUAGE_CROATIAN:
-      case RETRO_LANGUAGE_HUNGARIAN:
-      case RETRO_LANGUAGE_SERBIAN:
-      case RETRO_LANGUAGE_WELSH:
-      */
+      /* Latin Supplement Extended */
+      case RGUI_FONT_LATIN_EXT:
       {
          font_file = FONT_6X10_FILE_LSE;
          font_size = FONT_6X10_SIZE_LSE;
@@ -116,7 +110,29 @@ bitmapfont_lut_t *bitmapfont_6x10_load(unsigned language)
          glyph_max = FONT_6X10_GLYPH_MAX_LSE;
          break;
       }
-
+      case RGUI_FONT_GREEK_N_COPTIC:
+      {
+         font_file = FONT_6X10_FILE_ELC;
+         font_size = FONT_6X10_SIZE_ELC;
+         glyph_min = FONT_6X10_GLYPH_MIN_ELC;
+         glyph_max = FONT_6X10_GLYPH_MAX_ELC;
+         break;
+      }
+      case RGUI_FONT_GREEK_EXT:
+      {
+         font_file = FONT_6X10_FILE_ELE;
+         font_size = FONT_6X10_SIZE_ELE;
+         glyph_min = FONT_6X10_GLYPH_MIN_ELE;
+         glyph_max = FONT_6X10_GLYPH_MAX_ELE;
+         break;
+      }
+      /* Cyrillic + Supplement */
+      case RGUI_FONT_CYRILLIC:
+         font_file = FONT_6X10_FILE_CYR;
+         font_size = FONT_6X10_SIZE_CYR;
+         glyph_min = FONT_6X10_GLYPH_MIN_CYR;
+         glyph_max = FONT_6X10_GLYPH_MAX_CYR;
+         break;
       default:
          break;
    }
@@ -124,7 +140,7 @@ bitmapfont_lut_t *bitmapfont_6x10_load(unsigned language)
    /* Sanity check: should only trigger on bug */
    if (string_is_empty(font_file))
    {
-      RARCH_WARN("[bitmap 6x10] No font file found for specified language: %u\n", language);
+      RARCH_WARN("[bitmap 6x10] Font file not found for specified character: %u\n", rgui_font);
       goto error;
    }
 
