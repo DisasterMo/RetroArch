@@ -3726,10 +3726,6 @@ MSG_HASH(
    "Розблокувати звук"
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "Докладний режим"
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "Автоматичний знімок екрану"
    )

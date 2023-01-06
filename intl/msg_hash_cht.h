@@ -1990,7 +1990,7 @@ MSG_HASH(
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_VIDEO_CROP_OVERSCAN,
-   "裁剪過掃描 (需要重新啟動)"
+   "裁剪過度掃描 (需要重新啟動)"
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_VIDEO_CROP_OVERSCAN,
@@ -2732,6 +2732,10 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_META_ENABLE_HOTKEY,
    "組合鍵 (按住)"
+   )
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_INPUT_META_ENABLE_HOTKEY,
+   "設定後變更快捷鍵的操作方式，必須先按住組合鍵才能按快捷鍵。控制器組合鍵相關選項不影響。"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_HOTKEY_BLOCK_DELAY,
@@ -4297,7 +4301,7 @@ MSG_HASH(
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_VIDEO_LAYOUT_ENABLE,
-   "使用畫面佈置完成的螢幕畫面佈景(MAME Artwork's)。"
+   "使用畫面佈置完成的螢幕畫面佈景(MAME Artworks)。"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_VIDEO_LAYOUT_PATH,
@@ -4468,7 +4472,7 @@ MSG_HASH(
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_NOTIFICATION_SHOW_SET_INITIAL_DISK,
-   "載入映像檔編號時顯示螢幕通知。僅限載入 M3U格式 時顯示。"
+   "載入映像檔編號時顯示螢幕通知。僅限載入M3U格式時顯示。"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NOTIFICATION_SHOW_FAST_FORWARD,
@@ -5738,14 +5742,6 @@ MSG_HASH(
    "解鎖成就時播放音效。"
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "詳細模式"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "成就通知中顯示更多的訊息。"
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "自動截圖"
    )
@@ -5760,14 +5756,6 @@ MSG_HASH( /* suggestion for translators: translate as 'Play Again Mode' */
 MSG_HASH(
    MENU_ENUM_SUBLABEL_CHEEVOS_START_ACTIVE,
    "開啟所有成就的通知(包含之前獲得的成就)。"
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_CHALLENGE_INDICATORS,
-   "挑戰提示"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_CHALLENGE_INDICATORS,
-   "允許獲得成就時顯示挑戰條件提示。"
    )
 
 /* Settings > Achievements > Appearance */
@@ -8014,11 +8002,11 @@ MSG_HASH(
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_DISK_IMAGE_APPEND,
-   "選擇光碟映像檔載入執行，並加入到映像檔可使用編號中，加入編號後支援使用快捷鍵切換映像檔。\n注意事項: 這是舊功能。建議使用 M3U格式 載入映像檔，可跳過此步驟，直接使用快捷鍵切換映像檔。"
+   "選擇光碟映像檔載入執行，並加入到映像檔可使用編號中，加入編號後支援使用快捷鍵切換映像檔。\n注意事項: 這是舊功能。建議使用M3U格式載入映像檔，可跳過此步驟，直接使用快捷鍵切換映像檔。"
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_DISK_IMAGE_APPEND_TRAY_OPEN,
-   "選擇光碟映像檔，加入到編號中等待載入。\n注意事項: 這是舊功能。建議使用 M3U格式 載入映像檔，可跳過此步驟，直接使用快捷鍵切換映像檔。"
+   "選擇光碟映像檔，加入到編號中等待載入。\n注意事項: 這是舊功能。建議使用M3U格式載入映像檔，可跳過此步驟，直接使用快捷鍵切換映像檔。"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_DISK_INDEX,
@@ -8062,6 +8050,22 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_VIDEO_SHADER_PRESET,
    "載入著色器配置檔，自動設置著色器通道參數。"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_VIDEO_SHADER_PRESET_PREPEND,
+   "應用添加"
+   )
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_VIDEO_SHADER_PRESET_PREPEND,
+   "目前載入著色器的通道，最前編號添加配置檔，並自動應用變化。"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_VIDEO_SHADER_PRESET_APPEND,
+   "應用追加"
+   )
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_VIDEO_SHADER_PRESET_APPEND,
+   "目前載入著色器的通道，最後編號追加配置檔，並自動應用變化。"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_VIDEO_SHADER_PRESET_SAVE,
@@ -8445,6 +8449,26 @@ MSG_HASH(
 
 /* Settings Options */
 
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_LNG_COMPLETION_95_PLUS,
+   "95%以上"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_LNG_COMPLETION_75_PLUS,
+   "75~95%"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_LNG_COMPLETION_50_PLUS,
+   "50~74%"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_LNG_COMPLETION_25_PLUS,
+   "25~49%"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_LNG_COMPLETION_25_MINUS,
+   "25%以下"
+   )
 MSG_HASH( /* FIXME Should be MENU_LABEL_VALUE */
    MSG_UNKNOWN_COMPILER,
    "未知的編譯器"
@@ -9249,6 +9273,10 @@ MSG_HASH(
    "兼容非英語的西方語言。輕微影響效能。"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_MENU_RGUI_SWITCH_ICONS,
+   "開關使用圖示"
+   )
+MSG_HASH(
    MENU_ENUM_SUBLABEL_MENU_RGUI_SWITCH_ICONS,
    "顯示開關圖示不使用文字表達方式。"
    )
@@ -9603,6 +9631,10 @@ MSG_HASH(
    "變更選單使用的圖示主題。"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_XMB_SWITCH_ICONS,
+   "開關使用圖示"
+   )
+MSG_HASH(
    MENU_ENUM_SUBLABEL_XMB_SWITCH_ICONS,
    "顯示開關圖示不使用文字表達方式。"
    )
@@ -9791,7 +9823,7 @@ MSG_HASH(
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_PLAIN,
-   "主題背景圖"
+   "圖示主題背景圖"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_XMB_MENU_COLOR_THEME_UNDERSEA,
@@ -9950,6 +9982,10 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_MATERIALUI_ICONS_ENABLE,
    "顯示選單左側使用的圖示。"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_MATERIALUI_SWITCH_ICONS,
+   "開關使用圖示"
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_MATERIALUI_SWITCH_ICONS,

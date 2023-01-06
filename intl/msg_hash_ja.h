@@ -4858,14 +4858,6 @@ MSG_HASH(
    "実績を獲得したときにサウンドを再生します."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "実績の詳細モード"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "通知中の詳細情報を表示します。"
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "自動スクリーンショット"
    )

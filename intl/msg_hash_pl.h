@@ -5446,14 +5446,6 @@ MSG_HASH(
    "Odtwarzaj dźwięk po odblokowaniu osiągnięcia."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "Osiągnięcia trybu pełnego"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "Włącz lub wyłącz powiadomienia OSD dla osiągnięć."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "Automatyczny zrzut ekranu osiągnięć"
    )
@@ -5464,14 +5456,6 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_CHEEVOS_START_ACTIVE,
    "Rozpocznij sesję z aktywnymi osiągnięciami (nawet te wcześniej odblokowane)."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_CHALLENGE_INDICATORS,
-   "Wskaźniki wyzwań"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_CHALLENGE_INDICATORS,
-   "Zezwala osiągnięciom na wyświetlanie wskaźnika na ekranie, jeśli osiągnięcie jest do zdobycia."
    )
 
 /* Settings > Achievements > Appearance */

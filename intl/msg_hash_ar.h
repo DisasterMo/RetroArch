@@ -3686,14 +3686,6 @@ MSG_HASH(
    "استخدام منجزات غير رسمية و/أو ميزات بيتا لأغراض الاختبار."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "وضع مفصل"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "إظهار المزيد من المعلومات في الإشعارات."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "لقطة شاشة تلقائية"
    )

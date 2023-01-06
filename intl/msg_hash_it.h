@@ -5662,14 +5662,6 @@ MSG_HASH(
    "Emette un suono quando un trofeo è sbloccato."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "Modalità Dettagliata"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "Mostra maggiori informazioni nelle notifiche."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "Screenshot Automatico"
    )
@@ -5680,14 +5672,6 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_CHEEVOS_START_ACTIVE,
    "Inizia la sessione con tutti i trofei attivi (anche quelli precedentemente sbloccati)."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_CHALLENGE_INDICATORS,
-   "Indicatori di sfida"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_CHALLENGE_INDICATORS,
-   "Consente di visualizzare un indicatore sullo schermo mentre il trofeo può essere ottenuto."
    )
 
 /* Settings > Achievements > Appearance */

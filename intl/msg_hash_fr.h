@@ -5698,14 +5698,6 @@ MSG_HASH(
    "Jouer un son lorsqu'un succès est débloqué."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "Mode verbeux"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "Affiche plus d'informations dans les notifications."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "Capture d'écran automatique"
    )
@@ -5720,14 +5712,6 @@ MSG_HASH( /* suggestion for translators: translate as 'Play Again Mode' */
 MSG_HASH(
    MENU_ENUM_SUBLABEL_CHEEVOS_START_ACTIVE,
    "Démarrer la session avec tous les succès actifs (les succès précédemment débloqués inclus)."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_CHALLENGE_INDICATORS,
-   "Indicateurs de défi"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_CHALLENGE_INDICATORS,
-   "Permet aux succès d'afficher un indicateur à l'écran lorsqu'ils peuvent être gagnés."
    )
 
 /* Settings > Achievements > Appearance */

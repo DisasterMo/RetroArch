@@ -5650,14 +5650,6 @@ MSG_HASH(
    "Přehrát zvuk při odemčení úspěchu."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "Režim Verbose"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "Zobrazení dalších informací v oznámeních."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "Automatický Snímek Obrazovky"
    )
@@ -5672,14 +5664,6 @@ MSG_HASH( /* suggestion for translators: translate as 'Play Again Mode' */
 MSG_HASH(
    MENU_ENUM_SUBLABEL_CHEEVOS_START_ACTIVE,
    "Začněte relaci s aktivními všemi úspěchy (i těmi dříve odemčenými)."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_CHALLENGE_INDICATORS,
-   "Indikátory Výzvy"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_CHALLENGE_INDICATORS,
-   "Umožňuje zobrazení indikátoru úspěchu na obrazovce během doby, kdy lze úspěch získat."
    )
 
 /* Settings > Achievements > Appearance */

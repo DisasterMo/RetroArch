@@ -5718,14 +5718,6 @@ MSG_HASH(
    "Hang lejátszása egy trófea feloldásakor."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "Részletes mód"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "Több információt tartalmazó értesítések."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "Automatikus képernyőkép"
    )
@@ -5740,14 +5732,6 @@ MSG_HASH( /* suggestion for translators: translate as 'Play Again Mode' */
 MSG_HASH(
    MENU_ENUM_SUBLABEL_CHEEVOS_START_ACTIVE,
    "Legyen az összes trófea begyűjthető (még a korábban feloldottak is)."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_CHALLENGE_INDICATORS,
-   "Kihívásjelző"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_CHALLENGE_INDICATORS,
-   "A trófeák megjeleníthetnek egy jelzést a képernyőn, amikor a trófea éppen begyűjthető."
    )
 
 /* Settings > Achievements > Appearance */

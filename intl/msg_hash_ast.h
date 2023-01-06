@@ -1661,14 +1661,6 @@ MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_UNLOCK_SOUND_ENABLE,
    "Soníu de desbloquéu"
    )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "Mou detalláu"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "Amuesa más información nos avisos."
-   )
 
 /* Settings > Achievements > Appearance */
 

@@ -5578,14 +5578,6 @@ MSG_HASH(
    "Reproduz um som quando uma conquista é desbloqueada."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "Modo detalhado das conquistas"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "Mostre mais informação nas notificações."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "Capturar tela automaticamente"
    )
@@ -5600,14 +5592,6 @@ MSG_HASH( /* suggestion for translators: translate as 'Play Again Mode' */
 MSG_HASH(
    MENU_ENUM_SUBLABEL_CHEEVOS_START_ACTIVE,
    "Inicie a sessão com todas as conquistas ativas (mesmo as anteriormente desbloqueadas)."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_CHALLENGE_INDICATORS,
-   "Indicadores de desafio"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_CHALLENGE_INDICATORS,
-   "Permite que as conquistas exibam um indicador na tela momento em que podem ser obtidas."
    )
 
 /* Settings > Achievements > Appearance */

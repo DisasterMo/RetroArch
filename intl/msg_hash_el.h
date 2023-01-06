@@ -2746,14 +2746,6 @@ MSG_HASH(
    "Enable or disable unofficial achievements and/or beta features for testing purposes."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "Βερμπαλιστική Λειτουργία"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "Enable or disable OSD verbosity for achievements."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "Αυτόματο Στιγμιότυπο Οθόνης"
    )

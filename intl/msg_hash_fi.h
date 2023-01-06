@@ -347,7 +347,7 @@ MSG_HASH(
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_DOWNLOAD_CORE_SYSTEM_FILES,
-   "Ytimen järjestelmä tiedostojen lataaja"
+   "Ytimen järjestelmätiedostojen lataaja"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_UPDATE_CORE_INFO_FILES,
@@ -592,7 +592,7 @@ MSG_HASH(
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CPU_CORES,
-   "Prosessorin ytimet"
+   "Suorittimen ytimet"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_SYSTEM_INFO_FRONTEND_IDENTIFIER,
@@ -5410,14 +5410,6 @@ MSG_HASH(
    "Toista ääni, kun saavutus on avattu."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "Monisanainen tila"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "Näytä lisää tietoa ilmoituksissa."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "Automaattinen kuvakaappaus"
    )
@@ -5432,14 +5424,6 @@ MSG_HASH( /* suggestion for translators: translate as 'Play Again Mode' */
 MSG_HASH(
    MENU_ENUM_SUBLABEL_CHEEVOS_START_ACTIVE,
    "Aloita istunto kaikilla saavutuksilla (jopa aiemmin avatuilla saavutuksilla)."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_CHALLENGE_INDICATORS,
-   "Haasteiden ilmaisimet"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_CHALLENGE_INDICATORS,
-   "Mahdollistaa saavutukseen liittyvän ilmaisimen esittämisen näytöllä, kun saavutus voidaan suorittaa."
    )
 
 /* Settings > Achievements > Appearance */
@@ -12360,6 +12344,14 @@ MSG_HASH(
 MSG_HASH(
    MSG_CHEEVOS_HARDCORE_MODE_DISABLED_CHEAT,
    "Huijaus aktivoitu. Saavutusten hardcore-tila pois käytöstä nykyisessä istunnossa."
+   )
+MSG_HASH(
+   MSG_CHEEVOS_MASTERED_GAME,
+   "Mestaroitu %s"
+   )
+MSG_HASH(
+   MSG_CHEEVOS_COMPLETED_GAME,
+   "Läpäisty %s"
    )
 MSG_HASH(
    MSG_RESAMPLER_QUALITY_LOWEST,

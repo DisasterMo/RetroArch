@@ -5610,14 +5610,6 @@ MSG_HASH(
    "Einen Ton abspielen, wenn eine Errungenschaft freigeschaltet wird."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "Ausführlicher Modus für Errungenschaften"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "Aktiviere ausführliche Ausgabe von Bildschirmmeldungen für Errungenschaften."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "Automatische Bildschirmaufnahme"
    )
@@ -5632,14 +5624,6 @@ MSG_HASH( /* suggestion for translators: translate as 'Play Again Mode' */
 MSG_HASH(
    MENU_ENUM_SUBLABEL_CHEEVOS_START_ACTIVE,
    "Die Sitzung mit aktivierten Errungenschaften (auch den zuvor freigeschalteten) starten."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_CHALLENGE_INDICATORS,
-   "Herausforderungsindikatoren"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_CHALLENGE_INDICATORS,
-   "Ermöglicht Errungenschaften einen Indikator auf dem Bildschirm anzuzeigen, während die Errungenschaft verdient werden kann."
    )
 
 /* Settings > Achievements > Appearance */

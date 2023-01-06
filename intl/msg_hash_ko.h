@@ -5770,14 +5770,6 @@ MSG_HASH(
    "도전과제 달성시 소리를 재생합니다."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_VERBOSE_ENABLE,
-   "세부정보 표시 모드"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_VERBOSE_ENABLE,
-   "알림에 좀 더 자세한 정보를 표시합니다."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_AUTO_SCREENSHOT,
    "자동 스크린샷 저장"
    )
@@ -5792,14 +5784,6 @@ MSG_HASH( /* suggestion for translators: translate as 'Play Again Mode' */
 MSG_HASH(
    MENU_ENUM_SUBLABEL_CHEEVOS_START_ACTIVE,
    "모든 도전과제를 활성화하고 세션을 시작합니다. (이전에 달성한 과제도 다시 활성화됨)"
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_CHEEVOS_CHALLENGE_INDICATORS,
-   "도전 알림"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_CHEEVOS_CHALLENGE_INDICATORS,
-   "도전 과제를 달성할 수 있을 때 화면에 알림 아이콘을 표시합니다."
    )
 
 /* Settings > Achievements > Appearance */
