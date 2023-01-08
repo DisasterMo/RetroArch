@@ -2409,10 +2409,6 @@ MSG_HASH(
    "Inhalt pausieren, wenn Controller getrennt wird"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_PAUSE_ON_DISCONNECT,
-   "Inhalt pausieren, wenn ein Controller getrennt ist."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_BUTTON_AXIS_THRESHOLD,
    "Analog-zu-digital-Grenzwert"
    )

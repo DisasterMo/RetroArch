@@ -2501,10 +2501,6 @@ MSG_HASH(
    "Pausar el contenido cuando se desconecte un mando"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_PAUSE_ON_DISCONNECT,
-   "Pausa el contenido en el caso de que se desconecte cualquier mando."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_BUTTON_AXIS_THRESHOLD,
    "Umbral de entrada de ejes en botones"
    )

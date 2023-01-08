@@ -2393,10 +2393,6 @@ MSG_HASH(
    "Wstrzymaj zawartość po rozłączeniu kontrolera"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_PAUSE_ON_DISCONNECT,
-   "Wstrzymaj zawartość, gdy dowolny kontroler jest rozłączony."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_BUTTON_AXIS_THRESHOLD,
    "Próg osi przycisku wprowadzania danych"
    )
