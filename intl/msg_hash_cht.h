@@ -2443,10 +2443,6 @@ MSG_HASH(
    "輪詢方式"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_POLL_TYPE_BEHAVIOR,
-   "設定應用程式進行輸入輪詢的方式。設定為 <較早> 或 <稍晚> 可減少延遲，取決於裝置的效能。"
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_REMAP_BINDS_ENABLE,
    "執行核心重新映射按鍵 (進階設定)"
    )

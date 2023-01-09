@@ -2139,10 +2139,6 @@ MSG_HASH(
    "Správanie dopytu"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_POLL_TYPE_BEHAVIOR,
-   "Ovplyvniť správanie dopytu vstupu v RetroArch. Nastavenie 'Skoré' alebo 'Neskoré' môže spôsobiť nižšiu latenciu v závislosti na konfigurácii."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_REMAP_BINDS_ENABLE,
    "Zmeniť ovládanie pre toto jadro"
    )

@@ -2379,10 +2379,6 @@ MSG_HASH(
    "Comportamento Polling"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_POLL_TYPE_BEHAVIOR,
-   "Influenza su come viene eseguito il polling nell'input in RetroArch. Impostarlo a 'Anticipato' o 'Ritardato' può causare meno latenza, a seconda della configurazione."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_REMAP_BINDS_ENABLE,
    "Reimposta controlli per questo core"
    )

@@ -2431,10 +2431,6 @@ MSG_HASH(
    "Sistema de sondeo"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_POLL_TYPE_BEHAVIOR,
-   "Influencia cómo se realiza el sondeo de entrada dentro de RetroArch. «Temprano» o «Tardío» pueden reducir la latencia en función de tu configuración."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_REMAP_BINDS_ENABLE,
    "Reasignar controles para este núcleo"
    )

@@ -2363,10 +2363,6 @@ MSG_HASH(
    "Chování Datového Dotazu"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_POLL_TYPE_BEHAVIOR,
-   "Ovlivní způsob dotazování vstupu v aplikaci RetroArch. Nastavení na 'Časné' nebo 'Pozdní' může v závislosti na konfiguraci vést ke snížení latence."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_REMAP_BINDS_ENABLE,
    "Přemapování Her. Ovládačů pro toto Jádro"
    )

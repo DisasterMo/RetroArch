@@ -2463,10 +2463,6 @@ MSG_HASH(
    "폴링 방식"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_POLL_TYPE_BEHAVIOR,
-   "RetroArch에서 입력 폴링이 수행되는 방식을 설정합니다. 설정에 따라 지연시간이 줄어들 수 있습니다."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_REMAP_BINDS_ENABLE,
    "이 코어에 입력설정 파일 사용"
    )

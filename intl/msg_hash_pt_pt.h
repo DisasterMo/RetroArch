@@ -1906,6 +1906,10 @@ MSG_HASH(
 /* Settings > Input > Hotkeys */
 
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_INPUT_META_MENU_TOGGLE,
+   "Mostrar/esconder menu"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_META_QUIT_KEY,
    "Sair"
    )

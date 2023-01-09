@@ -2363,10 +2363,6 @@ MSG_HASH(
    "Pollauksen toiminta"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_POLL_TYPE_BEHAVIOR,
-   "Määritä kuinka syötteen pollaus toteutaan RetroArchissa. Riippuen kokoonpanostasi valinnat \"Aikaisin\" ja \"Myöhään\" voivat johtaa pienempään latenssiin."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_REMAP_BINDS_ENABLE,
    "Uudelleenmääritä tämän ytimen ohjaimet"
    )

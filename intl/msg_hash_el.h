@@ -1886,6 +1886,10 @@ MSG_HASH(
    "Ενεργοποίηση Πλήκτρων Συντόμευσης"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_INPUT_META_MENU_TOGGLE,
+   "Μενού"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_META_QUIT_KEY,
    "Έξοδος"
    )

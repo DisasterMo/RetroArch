@@ -2339,10 +2339,6 @@ MSG_HASH(
    "Polling-Verhalten"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_POLL_TYPE_BEHAVIOR,
-   "Beeinflusst, wie Polling in RetroArch abgefragt wird. Wird dieser Wert auf 'Früh' oder 'Spät' gesetzt, kann sich je nach Konfiguration die Latenz verringern."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_REMAP_BINDS_ENABLE,
    "Steuerungsremap für diesen Core"
    )

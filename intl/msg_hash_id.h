@@ -2179,10 +2179,6 @@ MSG_HASH(
    "Perilaku Polling"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_POLL_TYPE_BEHAVIOR,
-   "Memengaruhi cara penjajakan masukan di RetroArch. Jika diatur ke 'Lebih Awal' atau \"Telat\" dapat mengurangi latensi, tapi tergantung konfigurasi."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_REMAP_BINDS_ENABLE,
    "Atur ulang letak stik kendali untuk Core ini"
    )

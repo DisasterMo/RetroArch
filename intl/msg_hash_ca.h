@@ -2363,10 +2363,6 @@ MSG_HASH(
    "Comportament del sondeig"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_POLL_TYPE_BEHAVIOR,
-   "Afecta a la manera com RetroArch realitza el sondeig d'entrada. Depenent de la vostra configuraicó, establir-ho a 'Prest' o 'Tard' pot significar menys latència."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_REMAP_BINDS_ENABLE,
    "Re-mapeja els controls d'aquest nucli"
    )
