@@ -604,6 +604,14 @@ MSG_HASH(
    "Analogue to Digital Type"
    )
 MSG_HASH(
+   MENU_ENUM_SUBLABEL_INPUT_ADC_TYPE,
+   "Use specified analogue stick for D-Pad input. 'Forced' modes override core native analogue input."
+   )
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_INPUT_REMAP_PORT,
+   "Specifies which core port will receive input from front-end controller port %u."
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_ANALOG_LEFT_X_PLUS,
    "Left Analogue X+ (Right)"
    )

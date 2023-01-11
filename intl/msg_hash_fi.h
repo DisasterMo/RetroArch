@@ -501,7 +501,7 @@ MSG_HASH(
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CORE_INFO_SAVESTATE_DETERMINISTIC,
-   "Deterministinen (Tallennus/Lataus, Takaisinkelaus, Edelläpyöritys, Verkkopeli)"
+   "Deterministinen (Tallennus/Lataus, Takaisinkelaus, Edelläajo, Verkkopeli)"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CORE_INFO_FIRMWARE,
@@ -2875,11 +2875,11 @@ MSG_HASH(
 
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_META_RUNAHEAD_TOGGLE,
-   "Edelläpyöritys (päälle/pois)"
+   "Edelläajo (päälle/pois)"
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_INPUT_META_RUNAHEAD_TOGGLE,
-   "Vaihtaa edelläpyörityksen päälle/pois."
+   "Vaihtaa edelläajon päälle/pois."
    )
 
 MSG_HASH(
@@ -3160,7 +3160,7 @@ MSG_HASH(
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_RUN_AHEAD_SECONDARY_INSTANCE,
-   "Käytä toista instanssia edelläpyörityksessä"
+   "Käytä toista instanssia edelläajossa"
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_RUN_AHEAD_SECONDARY_INSTANCE,
@@ -12215,31 +12215,31 @@ MSG_HASH(
    )
 MSG_HASH(
    MSG_RUNAHEAD_ENABLED,
-   "Edelläpyöritys käytössä. Viive kuvat poistettu: %u."
+   "Edelläajo käytössä. Viive kuvat poistettu: %u."
    )
 MSG_HASH(
    MSG_RUNAHEAD_ENABLED_WITH_SECOND_INSTANCE,
-   "Edelläpyöritys käytössä toisella instanssilla. Viive kuvat poistettu: %u."
+   "Edelläajo käytössä toisella instanssilla. Viive kuvat poistettu: %u."
    )
 MSG_HASH(
    MSG_RUNAHEAD_DISABLED,
-   "Edelläpyöritys pois käytöstä."
+   "Edelläajo pois käytöstä."
    )
 MSG_HASH(
    MSG_RUNAHEAD_CORE_DOES_NOT_SUPPORT_SAVESTATES,
-   "Edelläpyöritys on poistettu käytöstä, koska tämä ydin ei tue pelitila tallennuksia."
+   "Edelläajo on poistettu käytöstä, koska tämä ydin ei tue pelitila tallennuksia."
    )
 MSG_HASH(
    MSG_RUNAHEAD_FAILED_TO_SAVE_STATE,
-   "Pelitilatallennuksen tallentaminen epäonnistui. Edellä pyöritys poistettiin käytöstä."
+   "Pelitilatallennuksen tallentaminen epäonnistui. Edelläajo poistettiin käytöstä."
    )
 MSG_HASH(
    MSG_RUNAHEAD_FAILED_TO_LOAD_STATE,
-   "Pelitilatallennuksen lataaminen epäonnistui. Edellä pyöritys poistettiin käytöstä."
+   "Pelitilatallennuksen lataaminen epäonnistui. Edelläajo poistettiin käytöstä."
    )
 MSG_HASH(
    MSG_RUNAHEAD_FAILED_TO_CREATE_SECONDARY_INSTANCE,
-   "Toisen instanssin luominen epäonnistui. Edelläpyöritys käyttää nyt vain yhtä instanssia."
+   "Toisen instanssin luominen epäonnistui. Edelläajo käyttää nyt vain yhtä instanssia."
    )
 MSG_HASH(
    MSG_SCANNING_OF_FILE_FINISHED,
