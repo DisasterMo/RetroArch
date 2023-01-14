@@ -2714,10 +2714,6 @@ MSG_HASH(
    "Tecla para activar teclas rápidas"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_META_ENABLE_HOTKEY,
-   "Si la Tecla para activar teclas rápidas está asignada, será necesario mantenerla pulsada antes de reconocer cualquier otra tecla rápida. Esto permite asignar botones de mandos a funciones de teclas rápidas sin afectar a sus entradas normales. Si se asigna el modificador a solo un mando, este no será necesario para las teclas rápidas del teclado, sino que ambos modificadores funcionarán para los dos dispositivos."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_HOTKEY_BLOCK_DELAY,
    "Retraso para activar teclas rápidas (en fotogramas)"
    )
@@ -10639,10 +10635,6 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_SUBSYSTEM_SETTINGS,
    "Accede a los ajustes de los subsistemas relacionados con el contenido actual."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_SUBSYSTEM_CONTENT_INFO,
-   " Contenido actual: %s"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NO_NETPLAY_HOSTS_FOUND,

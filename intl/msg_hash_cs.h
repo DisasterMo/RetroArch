@@ -2638,10 +2638,6 @@ MSG_HASH(
    "Hotkey Povolena"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_META_ENABLE_HOTKEY,
-   "Po přiřazení musí být klávesa 'Povolení Hotkey' podržena, než budou rozpoznány ostatní klávesové zkratky. Umožňuje namapovat tlačítka ovladače na funkce horkých kláves bez vlivu na normální zadávání. Přiřazení modifikátoru pouze ovladači jej nebude vyžadovat pro klávesové zkratky, ale oba modifikátory budou fungovat pro obě zařízení."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_HOTKEY_BLOCK_DELAY,
    "Povolit Zpoždění Hotkey (ve Snímcích)"
    )
@@ -10467,10 +10463,6 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_SUBSYSTEM_SETTINGS,
    "Přístup k nastavení subsystému pro aktuální obsah."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_SUBSYSTEM_CONTENT_INFO,
-   " Aktuální obsah: %s"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NO_NETPLAY_HOSTS_FOUND,

@@ -2746,10 +2746,6 @@ MSG_HASH(
    "핫키 사용"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_META_ENABLE_HOTKEY,
-   "할당된 경우, 다른 모든 핫키는 '핫키 사용' 키를 누른 채로 입력해야 합니다. 일반 입력에 영향을 끼치지 않으면서 컨트롤러 버튼을 핫키로 할당할 수 있게 합니다. '핫키 사용' 키를 컨트롤러에만 할당할 경우 키보드 핫키는 컨트롤러의 '핫키 사용' 키를 누르지 않아도 사용할 수 있으며, 컨트롤러와 키보드 모두 할당할 경우 두 장치의 '핫키 사용' 키는 두 장치 모두에 사용될 [...]"
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_HOTKEY_BLOCK_DELAY,
    "핫키 지연 시간 (프레임)"
    )
@@ -10739,10 +10735,6 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_SUBSYSTEM_SETTINGS,
    "현재 컨텐츠의 서브시스템 설정에 접근합니다."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_SUBSYSTEM_CONTENT_INFO,
-   " 현재 컨텐츠: %s"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NO_NETPLAY_HOSTS_FOUND,

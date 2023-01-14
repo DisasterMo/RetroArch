@@ -2686,10 +2686,6 @@ MSG_HASH(
    "Raccourcis activés"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_META_ENABLE_HOTKEY,
-   "Lorsqu'elle est assignée, la touche 'Raccourcis activés' doit être maintenue avant que d'autres raccourcis clavier ne soient reconnus. Permet aux touches de la manette d'être mappées à des fonctions de raccourci clavier sans affecter l'entrée normale. Affecter le modificateur aux manettes uniquement ne le nécessitera pas pour les raccourcis clavier, mais les deux modificateurs fonctionnent pour les deux périphériques."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_HOTKEY_BLOCK_DELAY,
    "Délai d'activation de la touche de raccourcis (en images)"
    )
@@ -10603,10 +10599,6 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_SUBSYSTEM_SETTINGS,
    "Accéder aux réglages du sous-système pour le contenu actuel."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_SUBSYSTEM_CONTENT_INFO,
-   " Contenu actuel : %s"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NO_NETPLAY_HOSTS_FOUND,

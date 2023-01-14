@@ -2590,10 +2590,6 @@ MSG_HASH(
    "Aktywacja klawisza skrótu"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_META_ENABLE_HOTKEY,
-   "Po przypisaniu klawisz 'Skrót włączony' musi być trzymany przed rozpoznaniem innych skrótów klawiszowych. Umożliwia mapowanie przycisków kontrolera do funkcji skrótu klawiszowego bez wpływu na normalne wprowadzanie danych. Przypisanie modyfikatora tylko do kontrolera nie będzie wymagało go dla klawiatury, ale oba modyfikatory działają dla obu urządzeń."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_HOTKEY_BLOCK_DELAY,
    "Opóźnienie aktywacji klawisza skrótu (w ramkach)"
    )
@@ -10119,10 +10115,6 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_SUBSYSTEM_SETTINGS,
    "Podsystemy"
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_SUBSYSTEM_CONTENT_INFO,
-   " Bieżąca zawartość: %s"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NO_NETPLAY_HOSTS_FOUND,

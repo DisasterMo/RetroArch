@@ -2618,10 +2618,6 @@ MSG_HASH(
    "Hotkeys aktivieren"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_META_ENABLE_HOTKEY,
-   "Nach der Zuweisung muss die Taste „Hotkey aktivieren“ gedrückt werden, bevor andere Hotkeys erkannt werden. Das ermöglicht die Zuweisung von Controller-Tasten zu Hotkey-Funktionen, ohne die normale Eingabe zu beeinflussen. Wird der Modifikator nur dem Controller zugewiesen, wird er für Tastatur-Hotkeys nicht benötigt, aber beide Modifikatoren funktionieren für beide Geräte."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_HOTKEY_BLOCK_DELAY,
    "Hotkey-Aktivierungsverzögerung (Frames)"
    )
@@ -10339,10 +10335,6 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_SUBSYSTEM_SETTINGS,
    "Zugriff auf die Subsystemeinstellungen für aktuelle Inhalte."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_SUBSYSTEM_CONTENT_INFO,
-   " Aktueller Inhalt: %s"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NO_NETPLAY_HOSTS_FOUND,

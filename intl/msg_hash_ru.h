@@ -2734,10 +2734,6 @@ MSG_HASH(
    "Активатор горячих клавиш"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_META_ENABLE_HOTKEY,
-   "После привязки кнопку 'Активатор горячих клавиш' необходимо удерживать нажатой для срабатывания горячих клавиш. Позволяет назначать кнопкам контроллера действия горячих клавиш, не влияя на стандартный ввод. Привязка модификатора только к контроллеру не затрагивает соч[...]"
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_HOTKEY_BLOCK_DELAY,
    "Задержка активации горячих клавиш (в кадрах)"
    )
@@ -10715,10 +10711,6 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_SUBSYSTEM_SETTINGS,
    "Доступ к настройкам подсистемы для текущего контента."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_SUBSYSTEM_CONTENT_INFO,
-   "Текущий контент: %s"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NO_NETPLAY_HOSTS_FOUND,

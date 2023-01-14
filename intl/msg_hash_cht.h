@@ -2726,10 +2726,6 @@ MSG_HASH(
    "組合鍵 (按住)"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_META_ENABLE_HOTKEY,
-   "設定後變更快捷鍵的操作方式，必須先按住組合鍵才能按快捷鍵。控制器組合鍵相關選項不影響。"
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_HOTKEY_BLOCK_DELAY,
    "組合鍵延遲 (幀數)"
    )

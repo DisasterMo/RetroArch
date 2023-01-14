@@ -5089,10 +5089,6 @@ MSG_HASH(
    "Podsystémy"
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_SUBSYSTEM_CONTENT_INFO,
-   " Aktuálny obsah: %s"
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NO_PLAYLISTS,
    "Žiadne hracie zoznamy."
    )

@@ -2662,10 +2662,6 @@ MSG_HASH(
    "Attiva Scorciatoia"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_META_ENABLE_HOTKEY,
-   "Quando è assegnato, il tasto 'Abilita Hotkey ' deve essere mantenuto prima che vengano riconosciuti altri tasti di scelta rapida. Consente di mappare i pulsanti del regolatore alle funzioni del tasto di scelta rapida senza influire sull'input normale. Assegnare il modificatore al regolatore solo non lo richiederà per i tasti di scelta rapida della tastiera, ma entrambi i modificatori funzionano per entrambi i dispositivi."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_HOTKEY_BLOCK_DELAY,
    "Ritardo per l'Attivazione della Scorciatoia (in Fotogrammi)"
    )
@@ -10495,10 +10491,6 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_SUBSYSTEM_SETTINGS,
    "Accedi alle impostazioni del sottosistema per il contenuto corrente."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_SUBSYSTEM_CONTENT_INFO,
-   " Contenuto attuale: %s"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NO_NETPLAY_HOSTS_FOUND,

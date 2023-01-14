@@ -2706,10 +2706,6 @@ MSG_HASH(
    "A gyorsbillentyűk engedélyezése"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_INPUT_META_ENABLE_HOTKEY,
-   "Ha be van állítva, akkor ezt a \"Gyorsbillentyű engedélyező\" gombot nyomva kell tartani a többi gyorsbillentyű használatához. Ezzel lehet a kontroller gombjait gyorsfunkciókhoz rendelni a normál bemenet zavarása nélkül. Ha csak kontrolleres módosító van megadva, az nem szükséges a billentyűzet gyorsgombjaihoz, de mindkét módosító működik mindkét eszközzel."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_HOTKEY_BLOCK_DELAY,
    "Gyorsgomb visszatartása (képkocka)"
    )
@@ -10407,10 +10403,6 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_SUBSYSTEM_SETTINGS,
    "A jelenlegi tartalom alrendszereinek beállításai."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_SUBSYSTEM_CONTENT_INFO,
-   " Aktuális tartalom: %s"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NO_NETPLAY_HOSTS_FOUND,
