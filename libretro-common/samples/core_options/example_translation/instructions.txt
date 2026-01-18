@@ -32,7 +32,7 @@ Place the `intl` and `.github` folders, including content, into the root
 of the repository.
 
 In `.github/workflows` are two files:
-`crowdin_prep.yml` & `crowdin_translate.yml`.
+`crowdin_source_upload.yml` & `crowdin_translation_sync.yml`.
 In each of those are placeholders, which need to be replaced.
 
 For convenience, one can run `intl/activate.py`, which will try to find
@@ -41,7 +41,7 @@ fill those placeholders with.
 
 Even then, one should still check, if it produced the correct result:
 
-For `crowdin_prep.yml`:
+For `crowdin_source_upload.yml`:
 > **NOTE:** Please verify, that this workflow watches the correct branch!
 Uploads happen, whenever `libretro_core_options.h` of that branch is changed.
 
@@ -52,7 +52,7 @@ Uploads happen, whenever `libretro_core_options.h` of that branch is changed.
 - <CORE_NAME>
 	- the name of the core (or repo)
 
-And for crowdin_translate.yml:
+And for crowdin_translation_sync.yml:
 - <0-59> <0-23>
 	- Minute and hour at which the sync will happen.
       The script will generate a random time for this, to avoid

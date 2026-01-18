@@ -4,7 +4,7 @@ name: Crowdin Translations Initial Setup
 
 # On manual run only.
 on:
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs:
   upload_source_file:

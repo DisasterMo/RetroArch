@@ -4,7 +4,7 @@ name: Crowdin Source Texts Upload
 
 # on change to the English texts
 on:
-  workflow_dispatch
+  workflow_dispatch:
   push:
     branches:
       - master

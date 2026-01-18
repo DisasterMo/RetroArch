@@ -13,8 +13,8 @@ if __name__ == '__main__':
 
    BASE_PATH = os.path.dirname(DIR_PATH)
    WORKFLOW_PATH = os.path.join(BASE_PATH, ".github", "workflows")
-   PREP_WF = os.path.join(WORKFLOW_PATH, "crowdin_prep.yml")
-   TRANSLATE_WF = os.path.join(WORKFLOW_PATH, "crowdin_translate.yml")
+   PREP_WF = os.path.join(WORKFLOW_PATH, "crowdin_source_upload.yml")
+   TRANSLATE_WF = os.path.join(WORKFLOW_PATH, "crowdin_translation_sync.yml")
    CORE_NAME = os.path.basename(BASE_PATH)
    CORE_OP_FILE = os.path.join(BASE_PATH, "**", "libretro_core_options.h")
 
