@@ -810,6 +810,9 @@ static void gfx_widgets_layout(
          case RETRO_LANGUAGE_KOREAN:
             fill_pathname_join_special(font_file, p_dispwidget->assets_pkg_dir, "korean-fallback-font.ttf", sizeof(font_file));
             break;
+         case RETRO_LANGUAGE_THAI:
+            fill_pathname_join_special(font_file, p_dispwidget->assets_pkg_dir, "thai-fallback-font.ttf", sizeof(font_file));
+            break;
          default:
             strlcpy(font_file, p_dispwidget->ozone_regular_font_path, sizeof(font_file));
             break;

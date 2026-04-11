@@ -8835,6 +8835,12 @@ static void materialui_init_font(gfx_display_t *p_disp,
          fill_pathname_join_special(fontpath, tmp_dir, "korean-fallback-font.ttf",
                sizeof(fontpath));
          break;
+      case RETRO_LANGUAGE_THAI:
+         fill_pathname_join_special(tmp_dir,
+               settings->paths.directory_assets, "pkg", sizeof(tmp_dir));
+         fill_pathname_join_special(fontpath, tmp_dir, "thai-fallback-font.ttf",
+               sizeof(fontpath));
+         break;
       default:
          fill_pathname_join_special(tmp_dir, dir_assets, "glui", sizeof(tmp_dir));
          fill_pathname_join_special(fontpath, tmp_dir, FILE_PATH_TTF_FONT,

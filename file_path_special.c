@@ -400,6 +400,11 @@ size_t fill_pathname_application_special(char *s,
                            settings->paths.directory_assets, "pkg", sizeof(tmp_dir));
                      _len = fill_pathname_join_special(s, tmp_dir, "korean-fallback-font.ttf", len);
                      break;
+                  case RETRO_LANGUAGE_THAI:
+                     fill_pathname_join_special(tmp_dir,
+                           settings->paths.directory_assets, "pkg", sizeof(tmp_dir));
+                     _len = fill_pathname_join_special(s, tmp_dir, "thai-fallback-font.ttf", len);
+                     break;
                   default:
                      {
                         char tmp_dir2[DIR_MAX_LENGTH];

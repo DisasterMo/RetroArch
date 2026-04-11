@@ -9714,6 +9714,10 @@ static void ozone_set_layout(
          fill_pathname_join_special(tmp_dir, path_directory_assets, "pkg", sizeof(tmp_dir));
          fill_pathname_join_special(font_path, tmp_dir, "korean-fallback-font.ttf", sizeof(font_path));
          break;
+      case RETRO_LANGUAGE_THAI:
+         fill_pathname_join_special(tmp_dir, path_directory_assets, "pkg", sizeof(tmp_dir));
+         fill_pathname_join_special(font_path, tmp_dir, "thai-fallback-font.ttf", sizeof(font_path));
+         break;
       default:
          fill_pathname_join_special(font_path, ozone->assets_path, "bold.ttf", sizeof(font_path));
          break;
@@ -9742,6 +9746,10 @@ static void ozone_set_layout(
       case RETRO_LANGUAGE_KOREAN:
          fill_pathname_join_special(tmp_dir, path_directory_assets, "pkg", sizeof(tmp_dir));
          fill_pathname_join_special(font_path, tmp_dir, "korean-fallback-font.ttf", sizeof(font_path));
+         break;
+      case RETRO_LANGUAGE_THAI:
+         fill_pathname_join_special(tmp_dir, path_directory_assets, "pkg", sizeof(tmp_dir));
+         fill_pathname_join_special(font_path, tmp_dir, "thai-fallback-font.ttf", sizeof(font_path));
          break;
       default:
          fill_pathname_join_special(font_path, ozone->assets_path, "regular.ttf", sizeof(font_path));
